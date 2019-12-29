@@ -170,22 +170,35 @@ function getCarInfoByIndex(inventory, index) {
  * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
  * it will return `This is a Lincoln Town Car`.
  */
-function getLastCarInfo( /* code here */ ) {
+function getLastCarInfo(inventory) {
   /* code here */
+  let veryLastcar = inventory.find((item, index) => {
+    return index === inventory.length - 1;
+  });
+  return `This is a ${veryLastcar.car_make} ${veryLastcar.car_model}`
 }
 
 /**
- * ### Challenge `getCarInfoById`
+ * ### Challenge `
+  getCarInfoById `
  * 
  * @instructions
  * getCarInfoById takes two arguments:
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  *     (2) a number which is the desired car id (see how each car has its own unique id).
- * getCarInfoById returns a string in the format `This is a {car_make} {car_model}
- * 
- * For example, if getCarInfoById is invoked with the inventory and the number 1,
- * it will return `This is a Lincoln Navigator`.
- */
+ * getCarInfoById returns a string in the format `
+  This is a {
+    car_make
+  } {
+    car_model
+  }
+  *
+  *
+  For example,
+  if getCarInfoById is invoked with the inventory and the number 1,
+  * it will
+  return `This is a Lincoln Navigator`.*/
+
 function getCarInfoById( /* code here */ ) {
   /* code here */
 }
